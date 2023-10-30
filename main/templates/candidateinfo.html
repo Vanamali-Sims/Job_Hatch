@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Candidate Info</title>
+    <style>
+    .class1{
+        font-family: 'Orbitron';
+        background-color: black;
+        color: green;
+    }
+    .cons {
+        font-family: Arial, sans-serif;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: center;
+        
+      }
+      .card {
+        width: 300px;
+        height: 200px;
+        background-color: white;
+        border-radius: 8px;
+        box-shadow: 0px 0px 8px rgba(0, 0, 0, 0.1);
+        margin: 16px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        padding: 16px;
+      }
+    .card {
+  /* Add shadows to create the "card" effect */
+  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+  transition: 0.3s;
+}
+
+/* On mouse-over, add a deeper shadow */
+.card:hover {
+  box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+}
+
+/* Add some padding inside the card container */
+.container {
+  padding: 2px 16px;
+}
+.card {
+  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+  transition: 0.3s;
+  border-radius: 5px; /* 5px rounded corners */
+}
+
+/* Add rounded corners to the top left and the top right corner of the image */
+img {
+  border-radius: 5px 5px 0 0;
+}
+
+
+body{
+  background-color: black;
+}
+.card:hover {
+  box-shadow: 0 8px 16px 0 green;
+}
+    </style>
+   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+</head>
+<body class="class1">
+       
+    <nav class="navbar bg-dark navbar navbar-expand-lg bg-dark bg-body-tertiary" data-bs-theme="dark">
+        <div class="container-fluid">
+          <a class="navbar-brand text-success" href="/">Career Connex</a>
+          
+      </nav>
+
+    <h1 style="text-align: center; margin-top: 22px;">Candidates</h1>
+    <div class="candidates">
+        <div class="cons">
+    
+            {% for cand in candidates %}
+          <div class="card" style="height: max-content;">
+    
+            <div class="container" style="text-align: center;" >
+              <h4>First Name: {{cand.firstname}}</h4>
+              <p>Last Name:{{cand.lastname}}</p>
+              <p>Email: {{cand.email}}</p>
+              <p>Address: {{cand.address}}</p>
+              <p>Phone: {{cand.phone}}</p>
+              <p>Description: {{cand.desc}}</p>
+              <p><a href="mailto:{{cand.email}}">Contact Candidate</a></p>
+            </div>
+          </div>
+          {% endfor %}
+        </div>
+    </div>
+
+
+
+
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js" integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.min.js" integrity="sha384-mQ93GR66B00ZXjt0YO5KlohRA5SY2XofN4zfuZxLkoj1gXtW8ANNCe9d5Y3eG5eD" crossorigin="anonymous"></script>
+</body>
+</html>

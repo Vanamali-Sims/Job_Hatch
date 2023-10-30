@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <!-- Design by foolishdeveloper.com -->
+    <title>Signup Page</title>
+ 
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;600&display=swap" rel="stylesheet">
+    <!--Stylesheet-->
+    <style media="screen">
+      *,
+*:before,
+*:after{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+body{
+    background-color: #080710;
+}
+.background{
+    width: 430px;
+    height: 520px;
+    position: absolute;
+    transform: translate(-50%,-50%);
+    left: 50%;
+    top: 50%;
+}
+.background .shape{
+    height: 200px;
+    width: 200px;
+    position: absolute;
+    border-radius: 50%;
+}
+.shape:first-child{
+    background: linear-gradient(
+    
+    
+    );
+    left: -80px;
+    top: -80px;
+}
+.shape:last-child{
+    background: linear-gradient(
+        to right,
+        
+
+    );
+    right: -30px;
+    bottom: -80px;
+}
+form{
+    height: 900px;
+    width: 550px;
+    background-color: black;
+    position: absolute;
+    transform: translate(-50%,-50%);
+    top: 50%;
+    left: 50%;
+    border-radius: 10px;
+    backdrop-filter: blur(10px);
+    border: 2px solid rgba(255,255,255,0.1);
+    box-shadow: 0 0 40px rgba(8,7,16,0.6);
+    padding: 50px 35px;
+}
+form *{
+    font-family: 'Poppins',sans-serif;
+    color: white;
+    letter-spacing: 0.5px;
+    outline: none;
+    border: none;
+}
+form h3{
+    font-size: 32px;
+    font-weight: 500;
+    line-height: 42px;
+    text-align: center;
+}
+
+label{
+    display: block;
+    margin-top: 30px;
+    font-size: 16px;
+    font-weight: 500;
+}
+input{
+    display: block;
+    height: 40px;
+    width: 100%;
+    background-color: rgba(255,255,255,0.07);
+    border-radius: 3px;
+    padding: 0 10px;
+    margin-top: 2px;
+    font-size: 14px;
+    font-weight: 300;
+}
+::placeholder{
+    color: #e5e5e5;
+}
+button{
+    margin-top: 14px;
+    width: 73%;
+    align-items: center;
+    background-color: #ffffff;
+    color: #080710;
+    padding: 15px 0;
+    font-size: 18px;
+    font-weight: 600;
+    border-radius: 5px;
+    cursor: pointer;
+}
+.social{
+  margin-top: 30px;
+  display: flex;
+}
+.social div{
+  background: red;
+  width: 150px;
+  border-radius: 3px;
+  padding: 5px 10px 10px 5px;
+  background-color: grey;
+  color: #eaf0fb;
+  text-align: center;
+}
+.social div:hover{
+  background-color: rgba(255,255,255,0.47);
+}
+.social .fb{
+  margin-left: 25px;
+}
+.social i{
+  margin-right: 4px;
+}
+.signup{
+    color: green;
+    font-family: Times
+}
+.label{
+    color: rgb(28, 208, 28);
+}
+
+.btn{
+    background-color: green;
+    margin-left: 60px;
+}
+
+.goback{
+    text-align: center;
+}
+
+.aa{
+    text-decoration: none;
+    color: green;
+}
+body{
+        font-family: 'Orbitron';
+        background-color: black;
+        color: green;
+    }
+    </style>
+</head>
+<body>
+    
+    <div class="background">
+        <div class="shape"></div>
+        <div class="shape"></div>
+    </div>
+    <form action="" method="post">
+        {% csrf_token %} 
+        <h3 class='signup'>Add a new job here</h3>
+
+        <label  for="username">Job Title</label></label>
+        <input class="label" type="text" placeholder="eg. Senior Java Developer" name="jobtitle" id="username">
+
+        
+        <label  for="username">Company name</labebel></label>
+        <input class="label" type="text" placeholder="Username" name="companyname" id="username">
+        
+        <label  for="email">Experience Required</label>
+        <input class="label" type="number" placeholder="experience in years" name="experince" id="email">
+        
+        <label  for="username">Salary</label></label>
+        <input class="label" type="number" placeholder="" name="salary" id="username">
+
+        <label for="posting">Posting</label>
+        <input type="text" placeholder="Field location" id="location" name="location">
+
+        <label for="posting">Openings</label>
+        <input type="number" placeholder="Number of openings" id="password1" name="opening">
+
+     <label for="requirement">Requirement</label>
+        <input type="text" placeholder="Urgent/Late" id="password1" name="requirement">
+
+        
+        <button class="btn text-center" type="submit">Submit</button>
+        <br>
+        
+       
+        <div class="goback text-center">
+            <a class = "aa"href="recruiter">Go back</a>
+        </div>
+
+    </form>
+
+    
+</body>
+</html>

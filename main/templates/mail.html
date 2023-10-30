@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+    <title>Document</title>
+</head>
+<style>
+
+
+    .c2{
+        margin: 180px;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .w{
+        width: 95%;
+    }
+    
+</style>
+<body>
+    <div class="p-3 mb-2 bg-dark text-white "> 
+    <section class="section-preview c2">
+
+        <!--Section: Contact v.2-->
+        <section class="mb-4 c2">
+  
+            <!--Section heading-->
+            <h2 class="h1-responsive font-weight-bold text-center my-4">Email Candidate</h2>
+            <!--Section description-->
+            <p class="text-center w-responsive mx-auto mb-5">Do you want to contact the candidate?</p>
+  
+            <div class="row">
+  
+                <!--Grid column-->
+                <div class="col-md-14 mb-md-0 mb-5">
+                    <form action="/contact" method="post">
+                       
+  
+                            <div class="col-md-6 w">
+                                <div class="md-form mb-0 ">
+                                    <label for="email" class="">Subject</label>
+                                    <input type="text" id="email" name="email" class="form-control" placeholder="enter your email address ">
+                                </div>
+                            </div>
+                            <!--Grid column-->
+  
+                        </div>
+                        
+                        <div class="row">
+  
+                            <!--Grid column-->
+                            <div class="col-md-12 ">
+  
+                                <div class="md-form">
+                                    <label for="message">Message</label>
+                                    <textarea type="text" id="message" name="message" rows="2" class="form-control md-textarea" placeholder=""></textarea>
+                                </div>
+  
+                            </div>
+                        </div>
+                        <!--Grid row-->
+  
+                        <div class="text-center text-md-left">
+                            <button class="btn btn-success my-3" type="submit"> Submit </button>
+                        </div>
+                        <div id="status"></div>
+                    </form>
+                </div>
+            </div>
+  
+        </section>
+        <!--Section: Contact v.2-->
+  
+      </section>
+
+    </div>
+
+      <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js" integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN" crossorigin="anonymous"></script>
+      <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js" integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.min.js" integrity="sha384-mQ93GR66B00ZXjt0YO5KlohRA5SY2XofN4zfuZxLkoj1gXtW8ANNCe9d5Y3eG5eD" crossorigin="anonymous"></script>
+</body>
+</html>

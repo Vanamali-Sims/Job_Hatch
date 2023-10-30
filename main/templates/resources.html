@@ -1,0 +1,236 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Bootstrap demo</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+</head>
+<style>
+    @import url('https://fonts.googleapis.com/css2? family=Poppins: wght@300;400;500; 600; 700; 800;900&display=swap');
+    *{
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        font-family: 'Poppins' sans-serif;
+    }
+    body{
+        /* display: flex; */
+        justify-content: center;
+        align-items: center;
+        min-height:100vh ;
+        background: #222;
+    }
+    .container{
+        
+        position: relative;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-wrap: wrap;
+        max-width: 1100px;
+    }
+
+    .container .card{
+        position: relative;
+        width: 320px;
+        height: 320px;
+        margin: 15px;
+        overflow: hidden; 
+    }
+    .container .card .imgBx, 
+    .container .card .contentBox{
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+    }
+    .container .card .imgBx img{
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        object-fit:cover ;
+    }
+    .container .card .contentBx::before
+    {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: #fff;
+        transform: scaleX(0);
+        transition: transform 0.5s ease-in-out;
+        transform-origin: right;
+        transition-delay: 0s;
+    }
+    .container .card:hover .contentBx::before
+    {
+      transform: scaleX(1);
+      transition: transform 0.5s ease-in-out;
+      transform-origin: left;
+      transition-delay: 0s;
+    }
+
+    .container .card .contentBx
+    {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .container .card .contentBx .content{
+        position: relative;
+        padding: 30px;
+        z-index: 1;
+        transition: 0.5s;
+        transform: translateX(-300px);
+        transition-delay: 0s;
+    }
+    .container .card:hover .contentBx .content{
+        
+        transform: translateX(0px);
+        transition-delay: 0.5s;
+
+    }
+    .container .card:hover .contentBx .content h3{
+        font-size: 1.3rem;
+        text-transform: uppercase;
+        letter-spacing: 1px;
+    }
+    .container .card .contentBx .content p{
+      font-size: 1em;
+      line-height: 1.4em;
+      font-weight: 300;
+    }
+
+    a {
+        color: #fff;
+        text-decoration: none;
+    }
+
+</style>
+<body>
+    <nav class="navbar bg-dark navbar navbar-expand-lg bg-dark bg-body-tertiary" data-bs-theme="dark">
+        <div class="container-fluid">
+          <a class="navbar-brand text-success" href="/">JobHatch</a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+             
+              <li class="nav-item">
+                <a class="nav-link" href="candidatedetails">Add Information</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+   
+   
+    <div class="container">
+        <div class="card">
+            <div class="imgBx">
+                <img src="https://live.staticflickr.com/65535/52192706978_7004c10974_b.jpg">
+            </div>
+            <div class="contentBx">
+                <div class="content">
+                   <h3> Cloud </h3> 
+                   <p>Cloud architecture is a key element of building in the cloud. It refers to the layout and connects all the necessary components and technologies required for cloud computing. 
+                </p>
+                   <button type="button" class="btn btn-primary"> <a href="https://www.youtube.com/live/YcNjZ43nOcI?"> video resources</a></button>
+                   <button type="button" class="btn btn-primary"> <a href="https://www.coursera.org/professional-certificates/gcp-cloud-architect">courses</a></button>
+                </div>
+            </div>
+        </div>
+        <div class="card">
+            <div class="imgBx">
+                <img src="https://fpa-trends.com/sites/default/files/imgorg/2018-4kv/243/ai-2.jpg">
+            </div>
+            <div class="contentBx">
+                <div class="content">
+                   <h3>AI & ML</h3> 
+                   <p> A machine learning engineer (ML engineer) is a person in IT who focuses on researching, building and designing self-running artificial intelligence (AI) systems to automate predictive models..</p>
+                   <button type="button" class="btn btn-primary"> <a href="https://youtu.be/GwIo3gDZCVQ">video resources</a></button>
+                   <button type="button" class="btn btn-primary"> <a href="https://www.coursera.org/specializations/mathematics-machine-learning">courses</a></button>
+                </div>
+            </div>
+        </div>
+        <div class="card">
+            <div class="imgBx">
+                <img src="https://www.cyberbahnit.com/wp-content/uploads/2017/11/blockchain.jpg">
+            </div>
+            <div class="contentBx">
+                <div class="content">
+                   <h3>Blockchain </h3> 
+                   <p> A blockchain is a decentralized, distributed and public digital ledger that is used to record transactions across many computers so that the record cannot be altered retroactively without the alteration of all subsequent blocks and the consensus of the network.</p>
+                   <button type="button" class="btn btn-primary"> <a href="https://youtube.com/playlist?list=PLgPmWS2dQHW-BRQCQCNYgmHUfCN115pn0">video resources </a></button>
+                   <button type="button" class="btn btn-primary"> <a href="https://www.udemy.com/course/build-your-blockchain-az/?">courses</a></button>
+                </div>
+            </div>
+        </div>
+        <div class="card">
+            <div class="imgBx">
+                <img src="https://www.iare.ac.in/sites/default/files/department_images/data_science.jpg">
+            </div>
+            <div class="contentBx">
+                <div class="content">
+                   <h3>Data Science</h3> 
+                   <p> data science combines math and statistics, specialized programming, advanced analytics, artificial intelligence (AI), and machine learning with specific subject matter expertise to uncover actionable insights hidden in an organization’s data.</p>
+                   <button type="button" class="btn btn-primary"><a href="https://youtu.be/-ETQ97mXXF0"> video resources</a></button>
+                   <button type="button" class="btn btn-primary"><a href="https://www.coursera.org/professional-certificates/ibm-data-science">courses</a></button>
+                </div>
+            </div>
+        </div>
+        <div class="card">
+            <div class="imgBx">
+                <img src="https://c8.alamy.com/comp/2P0JCJ0/futuristic-artificial-intelligence-concept-cyber-mind-aesthetic-design-machine-learning-created-by-generative-ai-2P0JCJ0.jpg">
+            </div>
+            <div class="contentBx">
+                <div class="content">
+                   <h3>DevOps</h3> 
+                   <p> A DevOps architecture incorporates the tools that enable that automation into the design of a software application and the infrastructure that sits between its non-production (development and testing) and production (operations) environments.</p>
+                   <button type="button" class="btn btn-primary"><a href="https://youtube.com/playlist?list=PL9ooVrP1hQOE5ZDJJsnEXZ2upwK7aTYiX
+                    ">video resources</a></button>
+                   <button type="button" class="btn btn-primary"> <a href="https://www.coursera.org/professional-certificates/devops-and-software-engineering">courses</a></button>
+                </div>
+            </div>
+        </div>
+        <div class="card">
+            <div class="imgBx">
+                <img src="https://clickup.com/blog/wp-content/uploads/2022/10/PM-cybersecurity-1.png">
+            </div>
+            <div class="contentBx">
+                <div class="content">
+                   <h3>Cybersecurity </h3> 
+                   <p>Cybersecurity is the practice of protecting critical systems and sensitive information from digital attacks. cybersecurity measures are designed to combat threats against networked systems and applications, whether those threats originate from inside or outside of an organization.
+                </p
+                   <button type="button" class="btn btn-primary"> <a href="https://youtu.be/PlHnamdwGmw">video resources </a></button>
+                   <button type="button" class="btn btn-primary"><a href="https://www.udemy.com/course/learn-ethical-hacking-from-scratch/">courses</a></button>
+                </div>
+            </div>
+        </div>
+    </div>
+   
+
+
+
+    
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"
+        integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.min.js"
+        integrity="sha384-mQ93GR66B00ZXjt0YO5KlohRA5SY2XofN4zfuZxLkoj1gXtW8ANNCe9d5Y3eG5eD"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>
